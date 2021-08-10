@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.min.js"></script>
+
+</head>
+<body style="margin:0;" background="canvas">
+    <div class= "container">
+        <nav>
+            <div class= "google-home-nav">
+                <img class= "google-home-nav__profile-image" src="https://lh3.googleusercontent.com/ogw/ADea4I6E4DTFVmoD2GHWMBzS_mc7AVpyyIa_ZuLHzOPRJg=s32-c-mo">
+                <svg class= "google-home-nav__apps-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+                <p class= "google-home-nav__links">Imgaes</p>
+                <p class= "google-home-nav__links">Gmail</p>
+            </div>
+        </nav>
+        <main>
+            <div class= "google-main-content">
+                <div class= "google-main-content__image">
+                    <img src= "/Users/annamartin/Documents/Doodle!/doodle-logo-01.png" height="85px">
+                </div>
+                <div class= "google-main-content_search">
+                    <svg class= "google-main-content_search-magnifying-glass" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#9aa0a6"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <input class= "google-main-content_search-input" type= "text"/>
+                    <img class="google-main-content_mic" src= "https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png">
+                </div>
+            </div>
+            <div class= "google-main-content-submit-btns">
+                <button class= "google-main-content-submit-btns-search">Doodle Search</button>
+                <button class= "google-main-content-submit-btns-lucky">I'm Feeling Lucky</button>
+            </div>
+            <div class= "google-main-content-olympics">
+                <a class= "google-main-content-oplymics-update" href="https://www.google.com/url?q=https://www.google.com/search%3Fq%3DOlympics%26source%3Dsmp.Olympics2021.10&amp;source=hpp&amp;id=19025478&amp;ct=3&amp;usg=AFQjCNHhJ12UEwBKPXMN8EURQbajLmsJtg&amp;sa=X&amp;ved=0ahUKEwjz5Ib9wJ_yAhUfFlkFHflwClUQ8IcBCBA" rel="nofollow">Stay updated on the Olympics with Doodle</a>
+            </div>
+        </main>
+        <footer>
+            <div class="google-footer-content">
+                <div class= "google-footer-content-side-texts">
+                    <div class= "google-footer-content-first-col">
+                        <p class="google-footer-text-left">Advertising</p>
+                        <p class="google-footer-text-left">Business</p>
+                        <p class="google-footer-text-left">How Search Works</p>
+                    </div>
+                    <div class= "google-footer-content-second-col">
+                        <p class="google-footer-text-right">Privacy</p>
+                        <p class="google-footer-text-right">Terms</p>
+                        <p class="google-footer-text-right">Settings</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!--the code below refers to the paint application-->
+        <div class="app">
+            <div class="controls">
+              <div class="title">Let's Doodle!</div>
+              <div class="type">
+                <input type="radio" name="pen-type" id="pen-pencil" checked>
+                <label for="pen-pencil">
+                    <img class="pen-pencil-icon" src="/Users/annamartin/Documents/Doodle!/outline_edit_black_24dp.png" height="25px"></i>
+                </label>
+                <input type="radio" name="pen-type" id="pen-brush">
+                <label for="pen-brush">
+                  <img class="pen-brush-icon" src="/Users/annamartin/Documents/Doodle!/outline_brush_black_24dp.png" height="27px"></i>
+                </label>
+              </div>
+              <div class="size">
+                <label for="pen-size">Size</label>
+                <input type="range" id="pen-size" min="1" max="50">
+              </div>
+              <div class="color">
+                <label for="pen-color">Color</label>
+                <input type="color" id="pen-color" value="#000">
+              </div>
+              <div class="actions">
+                <button id="reset-canvas">Reset</button>
+                <button id="save-canvas">Save</button>
+              </div>
+            </div>
+        </div>
+                <div class= canvas>
+                    <div id="canvas-wrapper"></div>
+                </div>
+            <script src="app.js"></script>
+          
+    </div>
+</body>
+
+
+<!doctype html>
+
+
+<!--<iframe src="https://trinket.io/embed/python/d10313a020?start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+I tried to use trinket to run the python script when called upon but they dont have the tkinter package available -->
+
+
+<!--<head><title>Test</title> 
+    <meta charset=utf-8> </head>
+    <body>
+        <form action="/Users/annamartin/Documents/Doodle!/index.py">
+            <input type="submit" value="Click me" />
+        </form>
+        
+        <button> <a href="/Users/annamartin/Documents/Doodle!/index.py">Search</a></button>
+
+    </body> 
+Decided to build the paint application into my html, css, and javascript instead -->
+
+</html>
+
